@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aadi Sethi — 3D, Games & Worlds</title>
+  <meta name="description" content="Portfolio of Aadi Sethi: 3D animation, game design and environment / set design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Boot screen -->
+  <div id="boot">
+    <div class="boot-inner mono">
+      <p>AS // RENDER ENGINE v2.6</p>
+      <p>LOADING SCENES <span id="boot-count">0</span>/<span id="boot-total">0</span></p>
+      <p class="boot-bar"><i></i></p>
+    </div>
+  </div>
+
+  <div id="cursor"><i></i></div>
+  <div class="scan" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#top" class="logo"><b>AS</b><span>AADI SETHI</span></a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO: hover-to-render viewport ============ -->
+  <section id="top" class="hero">
+    <canvas id="render"></canvas>
+    <div class="hud" aria-hidden="true">
+      <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br br-"></span>
+      <div class="hud-top mono">
+        <span><em class="rec"></em> VIEWPORT · <b id="mode">SOLID</b></span>
+        <span id="tc">00:00:00:00</span>
+      </div>
+      <div class="kanji">世界を作る</div>
+      <div class="hud-side mono">
+        <span>SAMPLES <b id="samples">0</b></span>
+        <span>RENDERED <b id="pct">0%</b></span>
+        <span class="meter"><i id="meter"></i></span>
+      </div>
+    </div>
+
+    <div class="hero-title">
+      <p class="mono kicker">3D · GAME DESIGN · ENVIRONMENT & SET</p>
+      <h1><span>AADI</span><span class="red">SETHI</span></h1>
+    </div>
+
+    <div class="hero-scene">
+      <p class="mono"><span id="scene-num">01</span> / <span id="scene-total">05</span></p>
+      <h2 id="scene-title">—</h2>
+      <p class="mono" id="scene-sub"></p>
+      <div class="scene-ctrl">
+        <button id="prev" aria-label="Previous scene">←</button>
+        <button id="next" aria-label="Next scene">→</button>
+      </div>
+    </div>
+
+    <p class="hero-hint mono" id="hint">MOVE TO RENDER · CLICK FOR NEXT SCENE</p>
+  </section>
+
+  <!-- Ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track"></div>
+  </div>
+
+  <!-- ============ WORK INDEX ============ -->
+  <section id="work" class="section">
+    <div class="sec-head">
+      <p class="mono tag">[01] INDEX</p>
+      <h2 class="display">Selected <span class="red">work</span></h2>
+      <p class="jp" aria-hidden="true">作品</p>
+    </div>
+    <div class="filters mono" role="tablist">
+      <button class="on" data-f="all">ALL <sup id="c-all"></sup></button>
+      <button data-f="3d">3D & ANIMATION <sup id="c-3d"></sup></button>
+      <button data-f="game">GAME DESIGN <sup id="c-game"></sup></button>
+      <button data-f="environment">ENVIRONMENT / SET <sup id="c-environment"></sup></button>
+    </div>
+    <ol id="index" class="index"></ol>
+    <div id="peek" aria-hidden="true"><img alt="" /></div>
+  </section>
+
+  <!-- ============ FEATURE: full-bleed video ============ -->
+  <section class="feature" id="feature">
+    <img class="feature-bg" src="assets/sbz-petals.jpg" alt="" loading="lazy" />
+    <video src="assets/sbz-blade.mp4" muted loop playsinline autoplay preload="metadata"></video>
+    <div class="feature-copy">
+      <p class="mono tag">[02] FEATURED · 3D ANIMATION</p>
+      <h2 class="display">千本桜<br /><span>Senbonzakura</span></h2>
+      <p>624 frames. A thousand blades. One storm of petals.</p>
+      <button class="btn" data-open="senbonzakura">Open case study →</button>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section about">
+    <div class="sec-head">
+      <p class="mono tag">[03] ABOUT</p>
+      <p class="jp" aria-hidden="true">私について</p>
+    </div>
+    <p class="about-text" id="about-text"></p>
+    <div class="about-grid">
+      <div>
+        <h3 class="mono">TOOLS</h3>
+        <ul class="chips" id="tools"></ul>
+      </div>
+      <div>
+        <h3 class="mono">PIPELINE</h3>
+        <ol class="pipe">
+          <li><b>01</b>Reference & concept</li>
+          <li><b>02</b>Greybox / blockout</li>
+          <li><b>03</b>Model, texture, dress the set</li>
+          <li><b>04</b>Light & render</li>
+          <li><b>05</b>Animate · play-test · ship</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact">
+    <img class="contact-bg" src="assets/krl-ronin.jpg" alt="" loading="lazy" />
+    <div class="contact-inner">
+      <p class="mono tag">[04] CONTACT</p>
+      <h2 class="display huge">Let's build<br /><span class="red">worlds.</span></h2>
+      <a id="mail" class="mail" href="#"></a>
+      <div class="links mono" id="links"></div>
+    </div>
+    <footer class="mono"><span>© <span id="year"></span> AADI SETHI</span><span>RENDERED IN THE BROWSER · NO PIXELS WASTED</span></footer>
+  </section>
+
+  <!-- ============ CASE STUDY overlay ============ -->
+  <div id="case" aria-hidden="true">
+    <button class="case-close mono" aria-label="Close">CLOSE ✕</button>
+    <div class="case-scroll">
+      <div class="case-media" id="case-media"></div>
+      <div class="case-body">
+        <p class="mono tag" id="case-kicker"></p>
+        <h2 class="display" id="case-title"></h2>
+        <div class="case-cols">
+          <p id="case-desc"></p>
+          <dl id="case-facts"></dl>
+        </div>
+        <ul class="chips" id="case-tools"></ul>
+      </div>
+      <div class="case-gallery" id="case-gallery"></div>
+      <button class="case-next" id="case-next"><span class="mono">NEXT PROJECT</span><b></b></button>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
