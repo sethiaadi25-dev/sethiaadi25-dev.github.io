@@ -486,6 +486,10 @@ $("#links").replaceChildren(
   ...SITE.links.filter(([, u]) => u).map(([n, u]) => Object.assign(document.createElement("a"), { textContent: `${n} ↗`, href: u, target: "_blank", rel: "noopener" }))
 );
 $("#year").textContent = new Date().getFullYear();
+document.querySelectorAll("[data-studio]").forEach((a) => {
+  if (SITE.studio?.url) a.href = SITE.studio.url;
+  else a.remove();
+});
 
 // Reveal on scroll
 document.querySelectorAll(".sec-head, .about-grid, .feature-copy, .contact-inner").forEach((el) => el.classList.add("rv"));

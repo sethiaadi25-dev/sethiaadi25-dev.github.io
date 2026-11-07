@@ -10,9 +10,11 @@
 export const SITE = {
   name: "AADI SETHI",
   role: "3D Artist · Game Designer · Environment & Set Design",
-  email: "hello@yourname.com", // ← put your real email here
+  email: "sethiaadi25@gmail.com",
+  studio: { name: "Nirakar Studio", url: "https://sethiaadi25-dev.github.io/nirakar/" },
   links: [
-    ["Instagram", "https://instagram.com/yourhandle"], // ← your links
+    ["Instagram", "https://www.instagram.com/aadi.oyeee/"],
+    ["Nirakar Studio", "https://sethiaadi25-dev.github.io/nirakar/"],
     ["ArtStation", ""],
     ["itch.io", ""],
   ],
